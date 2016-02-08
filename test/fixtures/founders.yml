@@ -1,0 +1,62 @@
+# == Schema Information
+#
+# Table name: founders
+#
+#  id               :integer          not null, primary key
+#  name             :text
+#  user_id          :integer
+#  company_name     :text
+#  email_address    :text
+#  password_digest  :text
+#  website          :text
+#  profile_picture  :text
+#  description      :text
+#  industry         :text
+#  capital_required :text
+#  equity_share     :text
+#  video            :text
+#  image_one        :text
+#  image_two        :text
+#  image_three      :text
+#  image_four       :text
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  user_id: 1
+  company_name: MyText
+  email_address: MyText
+  password_digest: MyText
+  website: MyText
+  profile_picture: MyText
+  description: MyText
+  industry: MyText
+  capital_required: MyText
+  equity_share: MyText
+  video: MyText
+  image_one: MyText
+  image_two: MyText
+  image_three: MyText
+  image_four: MyText
+
+two:
+  name: MyText
+  user_id: 1
+  company_name: MyText
+  email_address: MyText
+  password_digest: MyText
+  website: MyText
+  profile_picture: MyText
+  description: MyText
+  industry: MyText
+  capital_required: MyText
+  equity_share: MyText
+  video: MyText
+  image_one: MyText
+  image_two: MyText
+  image_three: MyText
+  image_four: MyText

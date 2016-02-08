@@ -1,0 +1,81 @@
+<%= form_for(@founder) do |f| %>
+  <% if @founder.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@founder.errors.count, "error") %> prohibited this founder from being saved:</h2>
+
+      <ul>
+      <% @founder.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :company_name %><br>
+    <%= f.text_area :company_name %>
+  </div>
+  <div class="field">
+    <%= f.label :email_address %><br>
+    <%= f.text_area :email_address %>
+  </div>
+  <div class="field">
+    <%= f.label :password_digest %><br>
+    <%= f.text_area :password_digest %>
+  </div>
+  <div class="field">
+    <%= f.label :website %><br>
+    <%= f.text_area :website %>
+  </div>
+  <div class="field">
+    <%= f.label :profile_picture %><br>
+    <%= f.text_area :profile_picture %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :industry %><br>
+    <%= f.text_area :industry %>
+  </div>
+  <div class="field">
+    <%= f.label :capital_required %><br>
+    <%= f.text_area :capital_required %>
+  </div>
+  <div class="field">
+    <%= f.label :equity_share %><br>
+    <%= f.text_area :equity_share %>
+  </div>
+  <div class="field">
+    <%= f.label :video %><br>
+    <%= f.text_area :video %>
+  </div>
+  <div class="field">
+    <%= f.label :image_one %><br>
+    <%= f.text_area :image_one %>
+  </div>
+  <div class="field">
+    <%= f.label :image_two %><br>
+    <%= f.text_area :image_two %>
+  </div>
+  <div class="field">
+    <%= f.label :image_three %><br>
+    <%= f.text_area :image_three %>
+  </div>
+  <div class="field">
+    <%= f.label :image_four %><br>
+    <%= f.text_area :image_four %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

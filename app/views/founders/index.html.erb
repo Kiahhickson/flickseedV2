@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Founders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>User</th>
+      <th>Company name</th>
+      <th>Email address</th>
+      <th>Password digest</th>
+      <th>Website</th>
+      <th>Profile picture</th>
+      <th>Description</th>
+      <th>Industry</th>
+      <th>Capital required</th>
+      <th>Equity share</th>
+      <th>Video</th>
+      <th>Image one</th>
+      <th>Image two</th>
+      <th>Image three</th>
+      <th>Image four</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @founders.each do |founder| %>
+      <tr>
+        <td><%= founder.name %></td>
+        <td><%= founder.user_id %></td>
+        <td><%= founder.company_name %></td>
+        <td><%= founder.email_address %></td>
+        <td><%= founder.password_digest %></td>
+        <td><%= founder.website %></td>
+        <td><%= founder.profile_picture %></td>
+        <td><%= founder.description %></td>
+        <td><%= founder.industry %></td>
+        <td><%= founder.capital_required %></td>
+        <td><%= founder.equity_share %></td>
+        <td><%= founder.video %></td>
+        <td><%= founder.image_one %></td>
+        <td><%= founder.image_two %></td>
+        <td><%= founder.image_three %></td>
+        <td><%= founder.image_four %></td>
+        <td><%= link_to 'Show', founder %></td>
+        <td><%= link_to 'Edit', edit_founder_path(founder) %></td>
+        <td><%= link_to 'Destroy', founder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Founder', new_founder_path %>
