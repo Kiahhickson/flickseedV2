@@ -10,6 +10,7 @@ class SwipesController < ApplicationController
   # GET /swipes/1
   # GET /swipes/1.json
   def show
+    
   end
 
   # GET /swipes/new
