@@ -17,7 +17,7 @@
 
 class Investor < ActiveRecord::Base
   has_secure_password
-  # has_many :swipes
+  has_many :swipes
   # has_many :messages 
   # messages belongs_to :investor through => :favourites
 end

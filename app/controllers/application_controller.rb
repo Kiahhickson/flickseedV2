@@ -8,11 +8,15 @@ class ApplicationController < ActionController::Base
   helper_method :current_investor 
 
   def current_founder 
-    @current_founder ||= Founder.find(session[:founder_id]) if session[:founder_id]
+    # session[:founder_id] = nil
+    @current_founder ||= Founder.find_by(:id => session[:founder_id]) if session[:founder_id]
+    session[:founder_id] = nil unless @current_founder
   end
 
-    def current_investor 
-    @current_investor ||= Investor.find(session[:investor_id]) if session[:investor_id]
+  def current_investor 
+    # session[:investor_id] = nil
+    @current_investor ||= Investor.find_by(:id => session[:investor_id]) if session[:investor_id]
+    session[:investor_id] = nil unless @current_investor
   end
 
   def require_founder

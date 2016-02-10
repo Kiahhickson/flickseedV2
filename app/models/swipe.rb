@@ -11,5 +11,5 @@
 #
 
 class Swipe < ActiveRecord::Base
-  # belongs_to :investor
+  belongs_to :investor
 end

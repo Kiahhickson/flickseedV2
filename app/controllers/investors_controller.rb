@@ -26,7 +26,7 @@ class InvestorsController < ApplicationController
   def create
     @investor = Investor.new(investor_params)
 
-    unless params[:file].empty?
+    unless params[:file] == ""
       image = Cloudinary::Uploader.upload( params[:file] )
       @investor.profile_picture = image["url"]
     end
@@ -45,6 +45,12 @@ class InvestorsController < ApplicationController
   # PATCH/PUT /investors/1
   # PATCH/PUT /investors/1.json
   def update
+
+    unless params[:file] == ""
+      image = Cloudinary::Uploader.upload( params[:file] )
+      @investor.profile_picture = image["url"]
+    end
+
     respond_to do |format|
       if @investor.update(investor_params)
         format.html { redirect_to @investor, notice: 'Investor was successfully updated.' }

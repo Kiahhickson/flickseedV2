@@ -18,4 +18,6 @@ Rails.application.routes.draw do
   delete '/investor_logout' => 'sessions#investor_logout'
   delete '/founder_logout' => 'sessions#founder_logout'
 
+  post '/founders/:id/like' => 'founders#like'
+
 end

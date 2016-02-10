@@ -5,10 +5,8 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <%= cloudinary_js_config %>
 </head>
 <body>
-
 
 
 
@@ -32,6 +30,7 @@
           <ul> 
             <li><%= current_founder.email_address %></li> 
             <li><%= link_to "Log out", '/founder_logout', method: "delete" %></li> 
+            <li><%= link_to "My profile", '#' %></li> 
           </ul> 
         <% else %> 
           <ul> 
@@ -43,7 +42,9 @@
         <% if current_investor %> 
           <ul> 
             <li><%= current_investor.email_address %></li> 
-            <li><%= link_to "Log out", '/investor_logout', method: "delete" %></li> 
+            <li><%= link_to "Log out", '/investor_logout', method: "delete" %></li>
+            <li><%= link_to "My profile", '#' %></li> 
+            <li><%= link_to "Favourites", '#' %></li> 
           </ul> 
         <% else %> 
           <ul> 
@@ -57,9 +58,6 @@
 </nav>
 
 <!-- END NAVAGATION BAR -->
-
-
-
 
   <%= yield %>
 

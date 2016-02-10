@@ -6,6 +6,7 @@ class CreateFounders < ActiveRecord::Migration
       t.text :company_name
       t.text :email_address
       t.text :password_digest
+      t.text :location
       t.text :website
       t.text :profile_picture
       t.text :description

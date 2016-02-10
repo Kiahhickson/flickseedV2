@@ -28,12 +28,14 @@ class SessionsController < ApplicationController
 
   def founder_logout 
     session[:founder_id] = nil 
+    session[:investor_id] = nil
     redirect_to '/' 
   end
 
   def investor_logout  
-  session[:investor_id] = nil 
-  redirect_to '/' 
+    session[:founder_id] = nil 
+    session[:investor_id] = nil 
+    redirect_to '/' 
   end
 
 end 

@@ -31,6 +31,10 @@
     <%= f.label :website %><br>
     <%= f.text_area :website %>
   </div>
+    <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_area :location %>
+  </div>
   <div class="field">
     <%= f.label :profile_picture %><br>
     <%= f.cl_image_upload :profile_picture %>
@@ -39,17 +43,11 @@
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
+
   <div class="field">
     <%= f.label :industry %><br>
-    <%= f.text_area :industry %>
-  </div>
-
-<div class="field">
-    <%= f.label :industry %><br>
     <%= f.select :industry, ['Agriculture and Mining', 'Business Services', 'Computer and Electronics','Consumer Services', 'Education', 'Energy and Utilities', 'Financial Services', 'Government', 'Health, Pharmaceuticals, and Biotech', 'Manufacturing', 'Media and Entertainment', 'Non-profit', 'Real Estate and Construction', 'Retail', 'Software and Internet'] %>
-
   </div>
-
 
   <div class="field">
     <%= f.label :capital_required %><br>

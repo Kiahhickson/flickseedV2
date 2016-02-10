@@ -4,7 +4,7 @@ class SwipesController < ApplicationController
   # GET /swipes
   # GET /swipes.json
   def index
-    @swipes = Swipe.all
+    @swipes = current_investor.swipes
   end
 
   # GET /swipes/1

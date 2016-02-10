@@ -8,6 +8,7 @@
 #  company_name     :text
 #  email_address    :text
 #  password_digest  :text
+#  location         :text
 #  website          :text
 #  profile_picture  :text
 #  description      :text
