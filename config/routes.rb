@@ -1,12 +1,21 @@
 Rails.application.routes.draw do
-  root :to => 'pages#home'
+  resources :swipes
+  resources :investors
   resources :founders
+
+  root :to => 'founders#index'
   
-  get 'signup'  => 'founders#new'
-
   get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
-  # delete '/login' => 'sessions#destroy'
 
+  get '/investor_signup' => 'investors#new'
+
+  get '/founder_signup' => 'founders#new'
+
+
+  post '/investor_login' => 'sessions#investor_login'
+  post '/founder_login' => 'sessions#founder_login'
+
+  delete '/investor_logout' => 'sessions#investor_logout'
+  delete '/founder_logout' => 'sessions#founder_logout'
 
 end

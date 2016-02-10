@@ -1,0 +1,45 @@
+<%= form_for(@investor) do |f| %>
+  <% if @investor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@investor.errors.count, "error") %> prohibited this investor from being saved:</h2>
+
+      <ul>
+      <% @investor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :company_name %><br>
+    <%= f.text_area :company_name %>
+  </div>
+  <div class="field">
+    <%= f.label :email_address %><br>
+    <%= f.text_area :email_address %>
+  </div>
+  <div class="field">
+    <%= f.label :password_digest %><br>
+    <%= f.text_area :password_digest %>
+  </div>
+  <div class="field">
+    <%= f.label :website %><br>
+    <%= f.text_area :website %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :profile_picture %><br>
+    <%= f.cl_image_upload :profile_picture %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

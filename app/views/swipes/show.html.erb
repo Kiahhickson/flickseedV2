@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Founder:</strong>
+  <%= @swipe.founder_id %>
+</p>
+
+<p>
+  <strong>Investor:</strong>
+  <%= @swipe.investor_id %>
+</p>
+
+<p>
+  <strong>Favourite:</strong>
+  <%= @swipe.favourite %>
+</p>
+
+<%= link_to 'Edit', edit_swipe_path(@swipe) %> |
+<%= link_to 'Back', swipes_path %>

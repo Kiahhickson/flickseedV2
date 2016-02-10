@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: swipes
+#
+#  id          :integer          not null, primary key
+#  founder_id  :integer
+#  investor_id :integer
+#  favourite   :boolean
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  founder_id: 1
+  investor_id: 1
+  favourite: false
+
+two:
+  founder_id: 1
+  investor_id: 1
+  favourite: false

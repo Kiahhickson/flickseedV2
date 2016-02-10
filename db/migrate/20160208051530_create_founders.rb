@@ -2,7 +2,7 @@ class CreateFounders < ActiveRecord::Migration
   def change
     create_table :founders do |t|
       t.text :name
-      t.integer :user_id
+      t.integer :founder_id
       t.text :company_name
       t.text :email_address
       t.text :password_digest

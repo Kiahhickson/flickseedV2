@@ -5,18 +5,22 @@ class ApplicationController < ActionController::Base
 
 
   helper_method :current_founder 
+  helper_method :current_investor 
 
   def current_founder 
-    @current_founder ||= Founder.find(session[:founder_id]) 
-    if session[:founder_id]
-    end
-  end 
+    @current_founder ||= Founder.find(session[:founder_id]) if session[:founder_id]
+  end
 
+    def current_investor 
+    @current_investor ||= Investor.find(session[:investor_id]) if session[:investor_id]
+  end
 
   def require_founder
-    redirect_to '/login' 
-    unless current_founder
-    end
+    redirect_to '/login' unless current_founder
+  end
+
+  def require_investor
+    redirect_to '/login' unless current_investor
   end
 
 

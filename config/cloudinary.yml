@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: div0moogk
+  api_key: '659479279533341'
+  api_secret: xgn0M4PfCrwGn6QjxXP6l3UXFNk
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: div0moogk
+  api_key: '659479279533341'
+  api_secret: xgn0M4PfCrwGn6QjxXP6l3UXFNk
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: div0moogk
+  api_key: '659479279533341'
+  api_secret: xgn0M4PfCrwGn6QjxXP6l3UXFNk
+  enhance_image_tag: true
+  static_image_support: false

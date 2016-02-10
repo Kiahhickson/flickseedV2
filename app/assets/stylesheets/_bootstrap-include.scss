@@ -1,0 +1,7 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@media (min-width: 400px) { #search { width: 300px; }}
+@media (min-width: 790px) { #search { width: 400px; }}
+@media (min-width: 992px) { #search { width: 600px; }}
+@media (min-width: 1200px) { #search { width: 800px; }}

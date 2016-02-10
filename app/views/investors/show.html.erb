@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Profile picture:</strong>
+  <img src="<%= @investor.profile_picture %>" class="img-circle">
+</p>
+<br>
+<p>
+  <strong>Name:</strong>
+  <%= @investor.name %>
+</p>
+<br>
+<p>
+  <strong>Company name:</strong>
+  <%= @investor.company_name %>
+</p>
+<br>
+<p>
+  <strong>Email address:</strong>
+  <%= @investor.email_address %>
+</p>
+<br>
+<p>
+  <strong>Password digest:</strong>
+  <%= @investor.password_digest %>
+</p>
+<br>
+<p>
+  <strong>Website:</strong>
+  <%= @investor.website %>
+</p>
+<br>
+<p>
+  <strong>Title:</strong>
+  <%= @investor.title %>
+</p>
+<br>
+<p>
+  <strong>Investor:</strong>
+  <%= @investor.investor_id %>
+</p>
+<br>
+<%= link_to 'Edit', edit_investor_path(@investor) %> |
+<%= link_to 'Back', investors_path %>

@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160208051530) do
+ActiveRecord::Schema.define(version: 20160209000049) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "founders", force: :cascade do |t|
     t.text     "name"
-    t.integer  "user_id"
+    t.integer  "founder_id"
     t.text     "company_name"
     t.text     "email_address"
     t.text     "password_digest"
@@ -35,6 +35,27 @@ ActiveRecord::Schema.define(version: 20160208051530) do
     t.text     "image_four"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+  end
+
+  create_table "investors", force: :cascade do |t|
+    t.text     "name"
+    t.text     "company_name"
+    t.text     "email_address"
+    t.text     "password_digest"
+    t.text     "website"
+    t.string   "title"
+    t.text     "profile_picture"
+    t.integer  "investor_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "swipes", force: :cascade do |t|
+    t.integer  "founder_id"
+    t.integer  "investor_id"
+    t.boolean  "favourite"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

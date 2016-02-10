@@ -1,84 +1,76 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Profile picture:</strong>
+ <br> 
+  <img src="<%= @founder.profile_picture %>" class="img-circle">
+</p>
+<br>
+<p>
   <strong>Name:</strong>
   <%= @founder.name %>
 </p>
-
-<p>
-  <strong>User:</strong>
-  <%= @founder.user_id %>
-</p>
-
+<br>
 <p>
   <strong>Company name:</strong>
   <%= @founder.company_name %>
 </p>
-
+<br>
 <p>
   <strong>Email address:</strong>
   <%= @founder.email_address %>
 </p>
-
-<p>
-  <strong>Password digest:</strong>
-  <%= @founder.password_digest %>
-</p>
-
+<br>
 <p>
   <strong>Website:</strong>
   <%= @founder.website %>
 </p>
-
-<p>
-  <strong>Profile picture:</strong>
-  <%= @founder.profile_picture %>
-</p>
-
+<br>
 <p>
   <strong>Description:</strong>
   <%= @founder.description %>
 </p>
-
+<br>
 <p>
   <strong>Industry:</strong>
   <%= @founder.industry %>
 </p>
-
+<br>
 <p>
   <strong>Capital required:</strong>
   <%= @founder.capital_required %>
 </p>
-
+<br>
 <p>
   <strong>Equity share:</strong>
   <%= @founder.equity_share %>
 </p>
-
+<br>
 <p>
   <strong>Video:</strong>
   <%= @founder.video %>
 </p>
-
+<br>
 <p>
   <strong>Image one:</strong>
   <%= @founder.image_one %>
 </p>
-
+<br>
 <p>
   <strong>Image two:</strong>
   <%= @founder.image_two %>
 </p>
-
+<br>
 <p>
   <strong>Image three:</strong>
   <%= @founder.image_three %>
 </p>
-
+<br>
 <p>
   <strong>Image four:</strong>
   <%= @founder.image_four %>
 </p>
+<br>
 
 <%= link_to 'Edit', edit_founder_path(@founder) %> |
 <%= link_to 'Back', founders_path %>

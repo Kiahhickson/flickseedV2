@@ -1,0 +1,29 @@
+<%= form_for(@swipe) do |f| %>
+  <% if @swipe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@swipe.errors.count, "error") %> prohibited this swipe from being saved:</h2>
+
+      <ul>
+      <% @swipe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :founder_id %><br>
+    <%= f.number_field :founder_id %>
+  </div>
+  <div class="field">
+    <%= f.label :investor_id %><br>
+    <%= f.number_field :investor_id %>
+  </div>
+  <div class="field">
+    <%= f.label :favourite %><br>
+    <%= f.check_box :favourite %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

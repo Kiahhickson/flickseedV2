@@ -1,4 +1,4 @@
-<%= form_for(@founder) do |f| %>
+<%= form_for(@founder, :html => { :multipart => true }) do |f| %>
   <% if @founder.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@founder.errors.count, "error") %> prohibited this founder from being saved:</h2>
@@ -14,10 +14,6 @@
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_area :name %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
   </div>
   <div class="field">
     <%= f.label :company_name %><br>
@@ -37,7 +33,7 @@
   </div>
   <div class="field">
     <%= f.label :profile_picture %><br>
-    <%= f.text_area :profile_picture %>
+    <%= f.cl_image_upload :profile_picture %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
@@ -47,6 +43,14 @@
     <%= f.label :industry %><br>
     <%= f.text_area :industry %>
   </div>
+
+<div class="field">
+    <%= f.label :industry %><br>
+    <%= f.select :industry, ['Agriculture and Mining', 'Business Services', 'Computer and Electronics','Consumer Services', 'Education', 'Energy and Utilities', 'Financial Services', 'Government', 'Health, Pharmaceuticals, and Biotech', 'Manufacturing', 'Media and Entertainment', 'Non-profit', 'Real Estate and Construction', 'Retail', 'Software and Internet'] %>
+
+  </div>
+
+
   <div class="field">
     <%= f.label :capital_required %><br>
     <%= f.text_area :capital_required %>
@@ -56,24 +60,24 @@
     <%= f.text_area :equity_share %>
   </div>
   <div class="field">
-    <%= f.label :video %><br>
-    <%= f.text_area :video %>
+    <%= label_tag :video %><br>
+    <%= file_field_tag :video %>
   </div>
   <div class="field">
     <%= f.label :image_one %><br>
-    <%= f.text_area :image_one %>
+    <%= f.file_field :image_one %>
   </div>
   <div class="field">
     <%= f.label :image_two %><br>
-    <%= f.text_area :image_two %>
+    <%= f.file_field :image_two %>
   </div>
   <div class="field">
     <%= f.label :image_three %><br>
-    <%= f.text_area :image_three %>
+    <%= f.file_field :image_three %>
   </div>
   <div class="field">
     <%= f.label :image_four %><br>
-    <%= f.text_area :image_four %>
+    <%= f.file_field :image_four %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -4,7 +4,7 @@
 #
 #  id               :integer          not null, primary key
 #  name             :text
-#  user_id          :integer
+#  founder_id       :integer
 #  company_name     :text
 #  email_address    :text
 #  password_digest  :text
