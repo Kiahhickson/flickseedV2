@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :investors
   resources :founders
 
+  get '/favourites' => 'swipes#index'
+
   root :to => 'founders#index'
   
   get '/login' => 'sessions#new'

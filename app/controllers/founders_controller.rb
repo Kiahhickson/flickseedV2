@@ -4,7 +4,7 @@ class FoundersController < ApplicationController
   # GET /founders
   # GET /founders.json
   def index
-    @founders = Founder.all
+    @founders = Founder.all.shuffle
   end
 
   # GET /founders/1
@@ -125,7 +125,7 @@ class FoundersController < ApplicationController
   def like
     swipe = Swipe.new
     swipe.founder_id = params[:id]
-    swipe.investor_id = current_investor.id
+    swipe.investor_id = @current_investor.id
     swipe.favourite = true
     swipe.save
     render :json => { :status => 'hunkydory' }
@@ -140,6 +140,6 @@ class FoundersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def founder_params
-      params.require(:founder).permit(:name, :founder_id, :company_name, :email_address, :password_digest, :website, :profile_picture, :description, :industry, :capital_required, :equity_share, :video, :image_one, :image_two, :image_three, :image_four)
+      params.require(:founder).permit(:name, :founder_id, :company_name, :email_address, :password, :password_confirmation, :website, :profile_picture, :description, :industry, :capital_required, :equity_share, :video, :image_one, :image_two, :image_three, :image_four)
     end
 end

@@ -4,13 +4,13 @@ class SwipesController < ApplicationController
   # GET /swipes
   # GET /swipes.json
   def index
-    @swipes = current_investor.swipes
+    @swipes = @current_investor.swipes
   end
 
   # GET /swipes/1
   # GET /swipes/1.json
   def show
-    
+
   end
 
   # GET /swipes/new
@@ -26,7 +26,6 @@ class SwipesController < ApplicationController
   # POST /swipes.json
   def create
     @swipe = Swipe.new(swipe_params)
-
     respond_to do |format|
       if @swipe.save
         format.html { redirect_to @swipe, notice: 'Swipe was successfully created.' }

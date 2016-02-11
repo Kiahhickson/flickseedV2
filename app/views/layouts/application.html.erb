@@ -26,27 +26,20 @@
     </div>
       
       <ul class="nav navbar-nav navbar-right">
-        <% if current_founder %> 
+        <% if @current_founder.present? %> 
           <ul> 
-            <li><%= current_founder.email_address %></li> 
+            <li><%= @current_founder.email_address %></li> 
             <li><%= link_to "Log out", '/founder_logout', method: "delete" %></li> 
             <li><%= link_to "My profile", '#' %></li> 
           </ul> 
-        <% else %> 
+        <% elsif @current_investor.present? %> 
           <ul> 
-            <li><%= link_to "Founder Login", '/login' %></a></li> 
-            <li><%= link_to "Founder Signup", '/founder_signup' %></a></li> 
-          </ul> 
-        <% end %>       
-
-        <% if current_investor %> 
-          <ul> 
-            <li><%= current_investor.email_address %></li> 
+            <li><%= @current_investor.email_address %></li> 
             <li><%= link_to "Log out", '/investor_logout', method: "delete" %></li>
-            <li><%= link_to "My profile", '#' %></li> 
-            <li><%= link_to "Favourites", '#' %></li> 
+            <li><%= link_to "My profile", investor_path(@current_investor) %></li> 
+            <li><%= link_to "Favourites", favourites_path %></li> 
           </ul> 
-        <% else %> 
+        <% else %>       
           <ul> 
             <li><%= link_to "Investor Login", '/login' %></a></li> 
             <li><%= link_to "Investor Signup", '/investor_signup' %></a></li> 

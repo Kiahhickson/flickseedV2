@@ -17,6 +17,7 @@ class SessionsController < ApplicationController
 
   def founder_login
     founder = Founder.find_by :email_address => params[:session][:email_address] 
+    binding.pry
     if founder.present? 
       session[:founder_id] = founder.id
       redirect_to founder

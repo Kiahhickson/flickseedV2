@@ -1,26 +1,24 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Swipes</h1>
+<h1>Favourites</h1>
 
 <table>
   <thead>
     <tr>
       <th>Founder</th>
-      <th>Investor</th>
-      <th>Favourite</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @swipes.each do |swipe| %>
+    <td> <img src="<%= swipe.founder.profile_picture %>" alt="" class="img-circle" style="max-height: 100px; max-width: 100px;" /></td>
       <tr>
-        <td><%= swipe.founder_id %></td>
-        <td><%= swipe.investor_id %></td>
-        <td><%= swipe.favourite %></td>
-        <td><%= link_to 'Show', swipe %></td>
-        <td><%= link_to 'Edit', edit_swipe_path(swipe) %></td>
-        <td><%= link_to 'Destroy', swipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to swipe.founder.company_name, founders_path %></td>
+        <td><% swipe.founder_id %></td>
+        <td><% swipe.investor_id %></td>
+        <td><% swipe.favourite %></td>
+        <td><%= link_to 'Remove Favourite', swipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Swipe', new_swipe_path %>
+
