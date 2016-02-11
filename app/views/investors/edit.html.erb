@@ -1,6 +1,61 @@
-<h1>Editing Investor</h1>
+<div class="container">
+  <div class="login-signup">
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="home">
+        <div class="row">
 
-<%= render 'form' %>
+          <div class="col-sm-6 mobile-pull">
+              <article role="login">
+                <h3 class="text-center"><i class="fa fa-lock"></i>Update Investor</h3>
+      
+                <%= form_for(:session, url: investor_login_path) do |f| %> 
 
-<%= link_to 'Show', @investor %> |
-<%= link_to 'Back', investors_path %>
+                  <div class="form-group">
+                    <%= f.label :profile_picture %><br>
+                    <%= f.cl_image_upload :profile_picture %>
+                  </div>
+
+                  <div class="form-group">
+                    <%= f.text_field :name, :placeholder => "Name", class: "form-control" %> 
+                  </div>
+
+                  <div class="form-group">
+                    <%= f.text_field :title, :placeholder => "Title", class: "form-control" %> 
+                  </div>
+
+                  <div class="form-group">
+                    <%= f.text_field :company_name, :placeholder => "Company Name", class: "form-control" %> 
+                  </div>
+
+                  <div class="form-group">
+                    <%= f.text_field :website, :placeholder => "Website", class: "form-control" %> 
+                  </div>
+
+                  <div class="form-group">
+                    <%= f.email_field :email_address, :placeholder => "Email", class: "form-control" %> 
+                  </div>
+
+                  <div class="form-group">
+                    <%= f.password_field :password, :placeholder => "Password", class: "form-control"%> 
+                  </div>
+
+                  <div class="form-group">
+                    <%= f.password_field :password_confirmation, :placeholder => "Password Confirmation", class: "form-control"%> 
+                  </div>
+
+                  <div class="actions">
+                    <%= f.submit "UPDATE", class: "btn btn-submit btn-success btn-block" %>
+                  </div>
+
+                    <% end %>
+
+              </article>
+            </div>
+
+          </div>
+          <!-- end of row -->
+        </div>
+        <!-- end of home -->
+  </div>
+
+

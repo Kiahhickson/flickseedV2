@@ -10,6 +10,7 @@ class FoundersController < ApplicationController
   # GET /founders/1
   # GET /founders/1.json
   def show
+    
   end
 
   # GET /founders/new

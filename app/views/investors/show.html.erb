@@ -1,44 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="login-signup">
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="home">
+        <div class="row">
 
-<p>
-  <strong>Profile picture:</strong>
-  <img src="<%= @investor.profile_picture %>" class="img-circle">
-</p>
-<br>
-<p>
-  <strong>Name:</strong>
-  <%= @investor.name %>
-</p>
-<br>
-<p>
-  <strong>Company name:</strong>
-  <%= @investor.company_name %>
-</p>
-<br>
-<p>
-  <strong>Email address:</strong>
-  <%= @investor.email_address %>
-</p>
-<br>
-<p>
-  <strong>Password digest:</strong>
-  <%= @investor.password_digest %>
-</p>
-<br>
-<p>
-  <strong>Website:</strong>
-  <%= @investor.website %>
-</p>
-<br>
-<p>
-  <strong>Title:</strong>
-  <%= @investor.title %>
-</p>
-<br>
-<p>
-  <strong>Investor:</strong>
-  <%= @investor.investor_id %>
-</p>
-<br>
-<%= link_to 'Edit', edit_investor_path(@investor) %> |
-<%= link_to 'Back', investors_path %>
+          <div class="col-sm-6 mobile-pull">
+              <article role="login">
+                <h3 class="text-center"><i class="fa fa-lock"></i>My Profile</h3>
+            
+                <center>
+                  <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="<%= @investor.profile_picture %>" name="aboutme" width="140" height="140" class="img-circle"></a>
+                  <h1><%= @investor.name %></h1>
+                  <h1><%= @investor.company_name %></h1>
+                  <h1><%= @investor.title %></h1>
+                  <h1><%= @investor.email_address %></h1>
+                  <h1><%= @investor.website %></h1>
+                  <%= link_to 'Edit', edit_investor_path(@investor) %>
+                </center>
+            </article>
+          </div>
+        </div>
+<!-- end of row -->
+      </div>
+<!-- end of home -->
+    </div>
+  x</div>
+</div>
+
+

@@ -12,8 +12,25 @@
  *
  *= require_tree .
  *= require_self
+ *= require jasny-bootstrap.min
  */
 
 .img-circle {
   max-width: 200px;
+}
+
+
+.dropdown li {
+  padding-left: 10px;
+}
+
+.navbar {
+    position: relative;
+}
+.brand {
+    position: absolute;
+    left: 50%;
+    margin-left: -50px !important;  /* 50% of your logo width */
+    display: block;
+    padding-top: 10px;
 }

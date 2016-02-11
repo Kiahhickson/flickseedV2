@@ -1,29 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="panel panel-default widget">
+    <div class="panel-heading"><span class="glyphicon glyphicon-comment"></span><h3 class="panel-title">Favourites</h3></div>
 
-<h1>Favourites</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Founder</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <% @swipes.each do |swipe| %>
-    <td> <img src="<%= swipe.founder.profile_picture %>" alt="" class="img-circle" style="max-height: 100px; max-width: 100px;" /></td>
-      <tr>
-        <td><%= link_to swipe.founder.company_name, founders_path %></td>
-        <td><% swipe.founder_id %></td>
-        <td><% swipe.investor_id %></td>
-        <td><% swipe.favourite %></td>
-        <td><%= link_to 'Remove Favourite', swipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      
+      <div class="panel-body">
 
-<br>
+          <div class="col-xs-6 col-sm-4">
+            <img src="<%= swipe.founder.profile_picture %>" alt="" class="img-circle" style="max-height: 100px; max-width: 100px;"/>
+          </div> 
+
+          <div class="col-xs-6 col-sm-4">
+            <p><%= link_to swipe.founder.company_name, founders_path %></p>
+          </div> 
+
+          <div class="col-xs-6 col-sm-4">
+            <a  href="#" class="btn btn-sm btn-hover btn-primary" href="#reply" >
+              <span class="glyphicon glyphicon-share-alt" style="padding-right:3px;"></span>Message</a>
+            <a class="btn btn-sm btn-hover btn-danger" <%= link_to 'Delete', swipe, method: :delete, data: { confirm: 'Are you sure?' } %> </a>
+          </div>
+
+      </div>
+    
+    <% end %>
+    </div>
+  </div>
+</div>
 
 

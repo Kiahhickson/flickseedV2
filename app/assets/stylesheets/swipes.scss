@@ -1,3 +1,20 @@
-// Place all the styles related to the Swipes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.widget .panel-body { padding:0px; }
+.widget .list-group { margin-bottom: 0; }
+.widget .panel-title { display:inline }
+.widget .label-info { float: right; }
+.widget li.list-group-item {border-radius: 0;border: 0;border-top: 1px solid #ddd;}
+
+
+.img-circle {
+    border-radius: 50%;
+    margin: 10px;
+}
+
+
+.col-sm-4 {
+  text-align: left;
+}
+
+.panel-heading {
+  margin-bottom: 10px;
+}

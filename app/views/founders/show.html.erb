@@ -1,52 +1,37 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="login-signup">
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="home">
+        <div class="row">
 
-<p>
-  <strong>Profile picture:</strong>
- <br> 
-  <img src="<%= @founder.profile_picture %>" class="img-circle">
-</p>
-<br>
-<p>
-  <strong>Name:</strong>
-  <%= @founder.name %>
-</p>
-<br>
-<p>
-  <strong>Company name:</strong>
-  <%= @founder.company_name %>
-</p>
-<br>
-<p>
-  <strong>Email address:</strong>
-  <%= @founder.email_address %>
-</p>
-<br>
-<p>
-  <strong>Website:</strong>
-  <%= @founder.website %>
-</p>
-<br>
-<p>
-  <strong>Description:</strong>
-  <%= @founder.description %>
-</p>
-<br>
-<p>
-  <strong>Industry:</strong>
-  <%= @founder.industry %>
-</p>
-<br>
-<p>
-  <strong>Capital required:</strong>
-  <%= @founder.capital_required %>
-</p>
-<br>
-<p>
-  <strong>Equity share:</strong>
-  <%= @founder.equity_share %>
-</p>
-<br>
-<p>
+          <div class="col-sm-6 mobile-pull">
+              <article role="login">
+                <h3 class="text-center"><i class="fa fa-lock"></i>My Profile</h3>
+            
+                <center>
+                  <a href="#aboutModal" data-toggle="modal" data-target="#myModal"><img src="<%= @founder.profile_picture %>" name="aboutme" width="140" height="140" class="img-circle"></a>
+                  <h1><%= @founder.name %></h1>
+                  <h1><%= @founder.company_name %></h1>
+                  <h1>Description: <%= @founder.description %></h1>
+                  <h1>Industry: <%= @founder.industry %></h1>
+                  <h1>Capital required: <%= @founder.capital_required %></h1>
+                  <h1>Equity share: <%= @founder.equity_share %></h1>
+                  <%= link_to 'Edit', edit_founder_path(@founder) %>
+                </center>
+            </article>
+          </div>
+        </div>
+<!-- end of row -->
+      </div>
+<!-- end of home -->
+    </div>
+  x</div>
+</div>
+
+
+
+
+<!-- <p>
   <strong>Video:</strong>
   <%= @founder.video %>
 </p>
@@ -71,6 +56,4 @@
   <%= @founder.image_four %>
 </p>
 <br>
-
-<%= link_to 'Edit', edit_founder_path(@founder) %> |
-<%= link_to 'Back', founders_path %>
+ -->
