@@ -31,7 +31,7 @@
                     <div class="like"></div>
                     <div class="dislike"></div>
                 </li>
-                <% end %>
+               
             </ul>
         </div>
         <!-- end jtinder container -->
@@ -45,37 +45,30 @@
     </div>
 
     <!-- jTinder status text  -->
+
     <div id="status"></div>
 
-
-
-
-<p id="notice"><%= notice %></p>
-
-<!-- <h1>Listing Founders</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>User</th>
-      <th>Company name</th>
-      <th>Email address</th>
-      <th>Password digest</th>
-      <th>Website</th>
-      <th>Profile picture</th>
-      <th>Description</th>
-      <th>Industry</th>
-      <th>Capital required</th>
-      <th>Equity share</th>
-      <th>Video</th>
-      <th>Image one</th>
-      <th>Image two</th>
-      <th>Image three</th>
-      <th>Image four</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead> -->
+    
+<div class="container">
+    <div class="row">
+        <ul class="thumbnails">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <img src="http://placehold.it/320x200" alt="ALT NAME" class="img-responsive" />
+                    <div class="caption">
+                         <h3><div><%= founder.company_name %></div></h3>
+                        <p><div>About: <%= founder.description %></div>
+                      <div>Industry: <%= founder.industry %></div>
+                      <div>Capital required: <%= founder.capital_required %></div>
+                      <div>Equity share: <%= founder.equity_share %></div>
+                      <div>Website: <%= founder.website %></div></p>
+                    </div>
+                </div>
+            </div>
+ <% end %>
+        </ul>
+    </div>
+</div>
 
 
 </body>

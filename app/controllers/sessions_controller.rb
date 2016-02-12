@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     investor = Investor.find_by :email_address => params[:session][:email_address] 
     if investor.present? 
       session[:investor_id] = investor.id
-      redirect_to founders_path
+      redirect_to root_path
     else
       flash[:error] = 'Invalid Login'
       redirect_to login_path
